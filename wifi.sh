@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Improve error handling
+set -euo pipefail
+
 # Check the first parameter.
 case ${1,,} in
 	status)
