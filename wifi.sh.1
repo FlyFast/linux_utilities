@@ -1,0 +1,67 @@
+.TH WIFI.SH 1 "August 2025" "linux_utilities" "User Commands"
+.SH NAME
+wifi.sh \- manage Wi-Fi radio via NetworkManager
+.SH SYNOPSIS
+.B wifi.sh
+[\fIstatus\fP|\fIon\fP|\fIoff\fP]
+.SH DESCRIPTION
+\fBwifi.sh\fP is a simple Bash script to interact with the Wi-Fi radio on Linux systems using NetworkManager (\fBnmcli\fP).
+
+The script provides three options:
+.TP
+\fBstatus\fP
+Shows the status of Wi-Fi devices. Displays output from \fBnmcli device status\fP filtered to Wi-Fi devices.
+
+.TP
+\fBon\fP
+Turns Wi-Fi radio on using \fBnmcli radio wifi on\fP.
+
+.TP
+\fBoff\fP
+Turns Wi-Fi radio off using \fBnmcli radio wifi off\fP.
+
+.SH USAGE
+.nf
+wifi.sh status
+wifi.sh on
+wifi.sh off
+.fi
+
+.SH OPTIONS
+.TP
+\fBstatus\fP
+Show current status of Wi-Fi devices.
+.TP
+\fBon\fP
+Turn Wi-Fi radio on.
+.TP
+\fBoff\fP
+Turn Wi-Fi radio off.
+
+.SH EXAMPLES
+.TP
+Check Wi-Fi status:
+.nf
+$ wifi.sh status
+.fi
+
+.TP
+Enable Wi-Fi:
+.nf
+$ wifi.sh on
+.fi
+
+.TP
+Disable Wi-Fi:
+.nf
+$ wifi.sh off
+.fi
+
+.SH REQUIREMENTS
+Requires \fBnmcli\fP (NetworkManager Command Line Interface) and \fBsudo\fP privileges.
+
+.SH AUTHOR
+FlyFast
+
+.SH SEE ALSO
+nmcli(1), NetworkManager(8)
